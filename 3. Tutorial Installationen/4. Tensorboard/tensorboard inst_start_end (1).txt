@@ -1,0 +1,16 @@
+# install in Anaconda Powershell Prompt as admin
+conda create -n tf tensorflow
+conda activate tf
+conda install -c conda-forge tensorboard
+conda deactivate
+
+#start tensorboard
+conda activate tf
+# define the path of the log files
+$path = 'D:\OneDrive - bwedu\Uni\09 ABC 1\Neuronale Netzwerke\Python\Hands on Machine Learning\my_logs' 
+tensorboard --logdir=$path --port=6006
+# call in browser http://localhost:6006/
+
+#close tensorboard
+#press ctrl + c
+conda deactivate
